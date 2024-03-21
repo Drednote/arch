@@ -8,15 +8,16 @@ else
     read -n1 -rep "yay was not located. Would you like to install it?\n" YAY
     if [[ $YAY == "Y" || $YAY == "y" ]]; then
         USER=$(ps -ax -o user='' -o tty='' | grep -v ' pts/' | sort -u | grep tty1 | awk '{print $1}')
-        cd /opt/ || echo "cannot find /opt/" | exit
-        sudo git clone https://aur.archlinux/yay-git.git
+        cd /opt/ || exit
+        sudo git clone https://aur.archlinux.org/yay-git.git
         sudo chown -R "$USER":"$USER" yay-git/
-        cd /yay-git/ || echo "cannot find /opt/yay-git" | exit
+        cd /opt/yay-git/ || exit
         makepkg -si --noconfirm
+        echo -e "yay was installed\n"
     else
         exit
     fi
 fi
 
+echo -e "update yay\n"
 yay -Suy --noconfirm
-
