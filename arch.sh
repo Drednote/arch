@@ -18,5 +18,5 @@ else
     fi
 fi
 
-yay -Suy | sleep 3
+yay -Suy --noconfirm
 
