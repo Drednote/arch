@@ -23,6 +23,6 @@ echo -e "update yay\n"
 yay -Suy --noconfirm
 
 read -rep "Install nvidia drivers? (y,n)" NVIDIA
-if [[ $YAY == "Y" || $YAY == "y" ]]; then
+if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
     sudo pacman -S nvidia
 fi
