@@ -18,4 +18,5 @@ else
     fi
 fi
 
-yay --version | yay -Suy
+yay -Suy | sleep 3
+
