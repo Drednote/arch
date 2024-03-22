@@ -1,11 +1,23 @@
 #!/bin/bash
 
+sudo pacman -Syu --noconfirm
+
+#### Dual boot ####
+read -rep "Configure dualboot? (y,n) " DUAL
+if [[ $DUAL == "Y" || $DUAL == "y" ]]; then
+    sudo pacman -S --noconfirm grub efibootmgr dosfstools mtools os-prober
+    sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    sudo sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+fi
+
 #### Check for yay ####
 ISYAY=/sbin/yay
 if [ -f "$ISYAY" ]; then
     echo -e "yay was located, moving on.\n"
 else
-    read -n1 -rep "yay was not located. Would you like to install it? (y,n)" YAY
+    read -rep "yay was not located. Would you like to install it? (y,n) " YAY
     if [[ $YAY == "Y" || $YAY == "y" ]]; then
         USER=$(ps -ax -o user='' -o tty='' | grep -v ' pts/' | sort -u | grep tty1 | awk '{print $1}')
         cd /opt/ || exit
