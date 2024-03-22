@@ -12,6 +12,11 @@ if [[ $DUAL == "Y" || $DUAL == "y" ]]; then
     sudo grub-mkconfig -o /boot/grub/grub.cfg
 fi
 
+read -rep "Install nvidia drivers? (y,n) " NVIDIA
+if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
+    sudo pacman -S nvidia
+fi
+
 #### Check for yay ####
 ISYAY=/sbin/yay
 if [ -f "$ISYAY" ]; then
@@ -33,8 +38,3 @@ fi
 
 echo -e "update yay\n"
 yay -Suy --noconfirm
-
-read -rep "Install nvidia drivers? (y,n)" NVIDIA
-if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
-    sudo pacman -S nvidia
-fi
