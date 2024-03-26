@@ -17,8 +17,9 @@ read -rep "Install nvidia drivers? (y,n) " NVIDIA
 if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
     sudo pacman -S nvidia nvidia-utils lib32-nvidia-utils
     # sudo sed -i 's/\(GRUB_CMDLINE_LINUX_DEFAULT="\)\(.*\)/\1 nvidia-drm.modeset=1/g' /etc/default/grub
-    sudo sed 's/^GRUB_CMDLINE_LINUX_DEFAULT=".$//' /etc/default/grub
-    sudo sed '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/$/ nvidia-drm.modeset=1/' /etc/default/grub
+    # sudo sed 's/^GRUB_CMDLINE_LINUX_DEFAULT=".$//' /etc/default/grub
+    sudo sed '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/.$//' /etc/default/grub >> grub
+    #sudo sed '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/$/ nvidia-drm.modeset=1/' /etc/default/grub
     #sudo grub-mkconfig -o /boot/grub/grub.cfg
     #sudo sed -i 's/\(MODULES=(\)\(.*\)/\1 nvidia nvidia_modeset nvidia_uvm nvidia_drm/g' /etc/mkinitcpio.conf
     #wget https://raw.githubusercontent.com/korvahannu/arch-nvidia-drivers-installation-guide/main/nvidia.hook
