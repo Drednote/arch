@@ -67,8 +67,9 @@ chmod +x ~/.config/startHyprland.sh
 sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d
 sudo sed -i 's/^DisplayServer=.*/DisplayServer=wayland/g' /etc/sddm.conf.d/default.conf
 sudo sed -i 's/^CompositorCommand=.*/CompositorCommand=~\/.config\/startWeston.sh/g' /etc/sddm.conf.d/default.conf
-sudo sed -i 's/^Name=Hyprland/Name=Hyprland Wayland/g' /usr/share/wayland-sessions
-sudo sed -i 's/^Exec=Hyprland/Exec=~\/.config\/startHyprland.sh/g' /usr/share/wayland-sessions
+sudo sed -i 's/^Name=Hyprland/Name=Hyprland Wayland/g' /usr/share/wayland-sessions/hyprland.desktop
+sudo sed -i 's/^Exec=Hyprland/Exec=~\/.config\/startHyprland.sh/g' /usr/share/wayland-sessions/hyprland.desktop
+sudo rm /usr/share/wayland-sessions/weston.desktop
 
 ### Script is done ###
 echo -e "Script had completed.\n"
