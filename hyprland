@@ -1,12 +1,12 @@
 #!/bin/bash
 
-to_install=true
+to_install=false
 
 displayHelp() {
   printf "Usage: hyprland [OPTIONS]\n"
   printf "Options:\n"
   printf "  -h                        show help text\n"
-  printf "  --no-install              If not needed install hyprland packages\n"
+  printf "  --install                 If needed to install hyprland packages\n"
 }
 
 while getopts ":h" opt; do
@@ -24,7 +24,7 @@ while [[ $# -gt 0 ]]; do
     key="$1"
     case $key in
         --no-install)
-            to_install=false
+            to_install=true
             ;;
         *)
             # Обработка неизвестных аргументов
@@ -63,7 +63,7 @@ cp -R source/startHyprland.sh ~/.config/
 chmod +x ~/.config/startWeston.sh
 chmod +x ~/.config/startHyprland.sh
 
-#sudo mkdir -p /etc/sddm.conf.d
+sudo mkdir -p /etc/sddm.conf.d
 sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d
 sudo sed -i 's/^DisplayServer=.*/DisplayServer=wayland/g' /etc/sddm.conf.d/default.conf
 sudo sed -i 's/^CompositorCommand=.*/CompositorCommand=~\/.config\/startWeston.sh/g' /etc/sddm.conf.d/default.conf
