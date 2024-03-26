@@ -54,6 +54,7 @@ if [[ $to_install == true ]]; then
     sudo pacman -S --noconfirm weston
 fi
 
+mkdir -p ~/.config/
 cp -R config/kitty ~/.config/
 cp -R config/hypr ~/.config/
 cp -R source ~/.config/
