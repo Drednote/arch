@@ -52,3 +52,8 @@ fi
 
 echo -e "update yay\n"
 yay -Suy --noconfirm
+
+# Start the bluetooth service
+echo -e "Starting the Bluetooth Service...\n"
+sudo systemctl enable --now bluetooth.service
+sleep 2
