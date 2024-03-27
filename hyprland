@@ -42,9 +42,9 @@ done
 if [[ $to_install == true ]]; then
     sudo pacman -Syu --noconfirm
 
-    read -p "$(echo -e ${WHITE}"Did you use desktop hyprland profile in archinstall? (y,n)) ${NC}")" HYP
+    read -p "$(echo -e ${WHITE}"Did you use desktop hyprland profile in archinstall? (y,n) ${NC}")" HYP
     if [[ $HYP == "Y" || $HYP == "y" ]]; then
-        sudo pacman -S --noconfirm foot waybar #weston
+        sudo pacman -S --noconfirm foot waybar otf-font-awesome #weston
     else
         yay -S --noconfirm hyprland kitty waybar \
         swaybg swaylock-effects wofi wlogout mako thunar \
@@ -68,16 +68,16 @@ cp -R config/waybar ~/.config/
 #sudo mkdir -p /etc/sddm.conf.d
 
 #sudo cp -R source/startWeston.sh /etc/sddm.conf.d/
-sudo cp -R source/startHyprland.sh /usr/share/wayland-sessions/
 
 #sudo chmod +x /etc/sddm.conf.d/startWeston.sh
-sudo chmod +x /usr/share/wayland-sessions/startHyprland.sh
+sudo chmod +x ~/.config/hypr/launch-hyprland
+sudo chmod +x ~/.config/waybar/launch-waybar
 
 #sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d
 #sudo sed -i 's/^DisplayServer=.*/DisplayServer=wayland/g' /etc/sddm.conf.d/default.conf
 #sudo sed -i 's/^CompositorCommand=.*/CompositorCommand=\/etc\/sddm.conf.d\/startWeston.sh/g' /etc/sddm.conf.d/default.conf
 sudo sed -i 's/^Name=Hyprland/Name=Hyprland Wayland/g' /usr/share/wayland-sessions/hyprland.desktop
-sudo sed -i 's/^Exec=Hyprland/Exec=\/usr\/share\/wayland-sessions\/startHyprland.sh/g' /usr/share/wayland-sessions/hyprland.desktop
+sudo sed -i 's/^Exec=Hyprland/Exec=~\/.config\/hypr\/launch-hyprland/g' /usr/share/wayland-sessions/hyprland.desktop
 #sudo rm /usr/share/wayland-sessions/weston.desktop
 
 ### Script is done ###
