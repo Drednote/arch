@@ -62,31 +62,8 @@ if [[ $to_install == true ]]; then
     yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
   fi
 
-  echo -e "${RED}==>${WHITE} Now will be installed rustup and cargo for eww${NC}"
-
-  # script need excute with sudo
-  # uninstall - rustup self uninstall
-
-  export RUSTUP_HOME=/usr/bin/rustup
-  export CARGO_HOME=/usr/bin/cargo
-
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-  echo -e "${YELLOW}==>${WHITE} rustup and cargo installed${NC}"
-
-  echo -e "${RED}==>${WHITE} Now will be installed eww${NC}"
-
-  git clone https://github.com/elkowar/eww
-  cd eww
-  cargo build --release --no-default-features --features=wayland
-
-  sudo mkdir /usr/bin/eww
-  sudo cp -r target/release/* /usr/bin/eww
-
-  sudo chmod +x /usr/bin/eww/eww
-  sudo rm -rf eww
-  export EWW=/usr/bin/eww./eww
-  echo -e "${YELLOW}==>${WHITE} eww installed${NC}"
+  sudo sh install/install-rust
+  sh install/install-eww
 fi
 
 mkdir -p ~/.config/
@@ -105,6 +82,9 @@ chmod +x ~/.config/hypr/launch-hyprland
 chmod +x ~/.config/waybar/launch-waybar
 chmod +x ~/.config/eww/launch-eww
 chmod +x ~/.config/hypr/bin/generate-hyprpaper
+
+# should replace with auto generate
+sh ~/.config/hypr/bin/generate-hyprpaper
 
 #sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d
 #sudo sed -i 's/^DisplayServer=.*/DisplayServer=wayland/g' /etc/sddm.conf.d/default.conf

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+RED='\033[0;31m'
+YELLOW='\033[1;33m'
+WHITE='\033[1;37m'
+NC='\033[0m' # No Color
+
+echo -e "${RED}==>${WHITE} Now will be installed eww${NC}"
+
+git clone https://github.com/elkowar/eww
+cd eww
+cargo build --release --no-default-features --features=wayland
+
+sudo mkdir /usr/bin/eww
+sudo cp -r target/release/* /usr/bin/eww
+
+sudo chmod +x /usr/bin/eww/eww
+sudo rm -rf eww
+
+export EWW=/usr/bin/eww./eww
+echo -e "${YELLOW}==>${WHITE} eww installed${NC}"
