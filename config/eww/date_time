@@ -1,0 +1,9 @@
+#!/bin/bash
+
+IS=$1
+
+if [ $IS == "true" ]; then
+    $EWW update is_date=false
+else
+    $EWW update is_date=true
+fi

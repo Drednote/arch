@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+hyprctl monitors | grep 'Monitor' | awk '{ print $2 }'

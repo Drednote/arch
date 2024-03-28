@@ -1,0 +1,31 @@
+#!/bin/bash
+
+arr=($(find config -type f))
+
+CONFIG_FILES=""
+for f in "${arr[@]}"; do
+    #echo $f
+    CONFIG_FILES+="$f "
+done
+
+#echo $CONFIG_FILES
+
+do_share() {
+    for f in "${arr[@]}"; do
+        sed -i 's/\r$//' "$f"
+    done
+
+    yes | cp -Rf config/* ~/.config/
+    rm -f ~/.config/hypr/wallpaper.png
+    yes | cp -Rf resources/wallpaper.png ~/.config/hypr
+
+    chmod +x ~/.config/hypr/launch-hyprland
+    chmod +x ~/.config/waybar/launch-waybar
+    chmod +x ~/.config/hypr/bin/generate-hyprpaper
+}
+
+#while true; do
+#    do_share &
+#    inotifywait -e create,modify $CONFIG_FILES
+    do_share
+#done

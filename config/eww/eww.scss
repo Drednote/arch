@@ -1,0 +1,32 @@
+* {
+    all: unset; //Unsets everything so you can style everything from scratch
+    font-size: 12px;
+    font-weight: 700;
+    //font-family: 'Arial'//, 'JetBrains Mono'//, 'Font Awesome 6 Brands', 'Font Awesome 6 Free', 'Font Awesome 6 Free Solid', 'Courier New', monospace;
+    // font-family:Space Mono;
+}
+
+//Global Styles
+
+window.bar {
+  background-color: rgba(0, 0, 0, .4);
+  border-bottom: rgba(255,255,255,.2) 1px solid;
+  // backdrop-filter: blur(32px);
+  // -webkit-backdrop-filter: blur(32px);
+}
+
+.greeter {
+  color: #572ec7;
+	// background-color:rgba(255,255,255,1);
+	// background-color:#181818;
+	background: linear-gradient(to right, #121212,#181818,#050505,#181818,#121212);
+}
+
+button {
+  color: white;
+}
+
+.clock {
+  // border-bottom: rgba(255,255,255,.2) 1px solid;
+  padding: 6px;
+}
