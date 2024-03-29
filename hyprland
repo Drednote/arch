@@ -41,13 +41,12 @@ done
 ### Install packages ####
 if [[ $to_install == true ]]; then
 
-  source install/install-yay
+  source source/install/install-yay
   sudo pacman -S --noconfirm inotify-tools libnotify
 
   #read -p "$(echo -e ${WHITE}"Did you use desktop hyprland profile in archinstall? (y,n) ${NC}")" HYP
   HYP="y"
   if [[ $HYP == "Y" || $HYP == "y" ]]; then
-    #weston
     sudo pacman -S --noconfirm sddm foot hyprland otf-font-awesome ttf-jetbrains-mono \
       hyprpaper
     yay -S --noconfirm rustup gtk-layer-shell eww
@@ -70,28 +69,16 @@ if [[ $to_install == true ]]; then
 fi
 
 mkdir -p ~/.config/
-yes | cp -Rf config/kitty ~/.config/
-yes | cp -Rf config/hypr ~/.config/
-yes | cp -Rf config/waybar ~/.config/
-yes | cp -Rf config/eww ~/.config/
+yes | cp -Rf config/* ~/.config/
 yes | cp -Rf resources/wallpaper.png ~/.config/hypr
 
-#sudo mkdir -p /etc/sddm.conf.d
-
-#sudo cp -R source/startWeston.sh /etc/sddm.conf.d/
-
-#sudo chmod +x /etc/sddm.conf.d/startWeston.sh
 chmod +x ~/.config/hypr/launch-hyprland
 chmod +x ~/.config/waybar/launch-waybar
 chmod +x ~/.config/eww/launch-eww
 chmod +x ~/.config/hypr/bin/generate-hyprpaper
 
-#sudo cp /usr/lib/sddm/sddm.conf.d/default.conf /etc/sddm.conf.d
-#sudo sed -i 's/^DisplayServer=.*/DisplayServer=wayland/g' /etc/sddm.conf.d/default.conf
-#sudo sed -i 's/^CompositorCommand=.*/CompositorCommand=\/etc\/sddm.conf.d\/startWeston.sh/g' /etc/sddm.conf.d/default.conf
-sudo sed -i 's/^Name=Hyprland/Name=Hyprland Wayland/g' /usr/share/wayland-sessions/hyprland.desktop
-sudo sed -i 's/^Exec=Hyprland/Exec=~\/.config\/hypr\/launch-hyprland/g' /usr/share/wayland-sessions/hyprland.desktop
-#sudo rm /usr/share/wayland-sessions/weston.desktop
+#sudo sed -i 's/^Name=Hyprland/Name=Hyprland Wayland/g' /usr/share/wayland-sessions/hyprland.desktop
+#sudo sed -i 's/^Exec=Hyprland/Exec=~\/.config\/hypr\/launch-hyprland/g' /usr/share/wayland-sessions/hyprland.desktop
 
 ### Script is done ###
 echo -e "${YELLOW}==>${WHITE} Script had completed. Now you can reboot to apply all settings${NC}"

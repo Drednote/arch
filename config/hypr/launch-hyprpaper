@@ -1,14 +1,5 @@
 #!/bin/bash
 
-monitors=($(hyprctl monitors | grep 'Monitor' | awk '{ print $2 }'))
-
-cat > ~/.config/hypr/hyprpaper.conf << EOF
-ipc = off
-preload = ~/.config/hypr/wallpaper.png
-EOF
-
-for monitor in "${monitors[@]}"; do
-    echo "wallpaper = $monitor,~/.config/hypr/wallpaper.png" >> ~/.config/hypr/hyprpaper.conf
-done
+source bin/generate-hyperpaper
 
 hyprpaper
