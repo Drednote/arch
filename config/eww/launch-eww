@@ -2,8 +2,10 @@
 
 ## Run eww daemon if not running already
 if [[ ! `pidof eww` ]]; then
-	${EWW} daemon
+	#${EWW} daemon
+	eww daemon
 	sleep 1
 fi
 
-$EWW open bar
+#$EWW open bar
+eww open bar
