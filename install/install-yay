@@ -7,12 +7,14 @@ if [ -f "$ISYAY" ]; then
 else
     read -rep "yay was not located. Would you like to install it? (y,n) " YAY
     if [[ $YAY == "Y" || $YAY == "y" ]]; then
+        CUR_PWD=$(pwd)
         cd /opt/ || exit
         sudo git clone https://aur.archlinux.org/yay-git.git
         sudo chown -R "$USER":"$USER" yay-git/
         cd /opt/yay-git/ || exit
         makepkg -si --noconfirm
         echo -e "yay was installed\n"
+        cd $CUR_PWD
     else
         exit
     fi

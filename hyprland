@@ -50,7 +50,7 @@ if [[ $to_install == true ]]; then
     #weston
     sudo pacman -Sw --noconfirm sddm foot hyprland otf-font-awesome ttf-jetbrains-mono \
       hyprpaper rustup
-    yay -Sw --noconfirm eww
+    yay -Sw eww
   else
     yay -S --noconfirm hyprland kitty waybar \
       swaybg swaylock-effects wofi wlogout mako thunar \
