@@ -32,7 +32,7 @@ if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
     sudo sed -i '/^HOOKS=(.*kms.*/ s/kms//' /etc/mkinitcpio.conf
     sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 
-    sudo echo "options nvidia-drm modeset=1" >> /etc/modprobe.d/nvidia.conf
+    echo "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
     
     #wget https://raw.githubusercontent.com/korvahannu/arch-nvidia-drivers-installation-guide/main/nvidia.hook
     #sudo mkdir -p /etc/pacman.d/hooks
