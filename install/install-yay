@@ -9,9 +9,9 @@ else
     if [[ $YAY == "Y" || $YAY == "y" ]]; then
         CUR_PWD=$(pwd)
         cd /opt/ || exit
-        sudo git clone https://aur.archlinux.org/yay-git.git
-        sudo chown -R "$USER":"$USER" yay-git/
-        cd /opt/yay-git/ || exit
+        sudo git clone https://aur.archlinux.org/yay.git
+        sudo chown -R "$USER":"$USER" yay/
+        cd /opt/yay/ || exit
         makepkg -si --noconfirm
         echo -e "yay was installed\n"
         cd $CUR_PWD
