@@ -3,7 +3,7 @@
 #### Check for yay ####
 ISYAY=/sbin/yay
 if [ ! -f "$ISYAY" ]; then
-    read -rep "yay was not located. Would you like to install it? (y,n) " YAY
+    read -p "$(echo -e ${WHITE}"Would you like to install yay? (y,n) ${NC}")" HYP
     if [[ $YAY == "Y" || $YAY == "y" ]]; then
         CUR_PWD=$(pwd)
         cd /opt/ || exit
@@ -13,10 +13,11 @@ if [ ! -f "$ISYAY" ]; then
         makepkg -si --noconfirm
         echo -e "yay was installed\n"
         cd $CUR_PWD
-    else
-        exit
+        
+        echo -e "update yay\n"
+        yay -Suy --noconfirm
     fi  
+else
+    echo -e "update yay\n"
+    yay -Suy --noconfirm
 fi
-
-echo -e "update yay\n"
-yay -Suy --noconfirm

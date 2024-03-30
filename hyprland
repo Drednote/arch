@@ -1,6 +1,7 @@
 #!/bin/bash
 
 RED='\033[0;31m'
+GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 NC='\033[0m' # No Color
@@ -44,41 +45,33 @@ if [[ $to_install == true ]]; then
   source source/install/install-yay
   sudo pacman -S --noconfirm inotify-tools libnotify
 
-  #read -p "$(echo -e ${WHITE}"Did you use desktop hyprland profile in archinstall? (y,n) ${NC}")" HYP
-  HYP="y"
-  if [[ $HYP == "Y" || $HYP == "y" ]]; then
-    sudo pacman -S --noconfirm sddm foot hyprland otf-font-awesome ttf-jetbrains-mono \
-      hyprpaper
-    yay -S --noconfirm rustup gtk-layer-shell eww
-  else
-    yay -S --noconfirm hyprland kitty waybar \
-      swaybg swaylock-effects wofi wlogout mako thunar \
-      ttf-jetbrains-mono-nerd noto-fonts-emoji \
-      polkit-gnome python-requests starship \
-      swappy grim slurp pamixer brightnessctl gvfs \
-      bluez bluez-utils lxappearance xfce4-settings \
-      dracula-gtk-theme dracula-icons-git xdg-desktop-portal-hyprland
+  sudo pacman -S --noconfirm sddm foot hyprland otf-font-awesome ttf-jetbrains-mono \
+    hyprpaper xdg-desktop-portal-hyprland qt6-wayland \
+    dunst dolphin wofi
+  yay -S --noconfirm rustup gtk-layer-shell eww
 
-    # Clean out other portals
-    echo -e "Cleaning out conflicting xdg portals...\n"
-    yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
-  fi
+  # Clean out other portals
+  yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
 
   #sudo sh install/eww/install-rust
   #sh install/eww/install-eww
 fi
 
-mkdir -p ~/.config/
-yes | cp -Rf config/* ~/.config/
-yes | cp -Rf resources/wallpaper.png ~/.config/hypr
+sudo systemctl enable sddm
 
-chmod +x ~/.config/hypr/launch-hyprland
-chmod +x ~/.config/waybar/launch-waybar
-chmod +x ~/.config/eww/launch-eww
-chmod +x ~/.config/hypr/bin/generate-hyprpaper
+source source/export-envs
+echo -e "${GREEN}==>${WHITE} hypr config home = $HYPR_CONFIG_HOME${NC}"
 
-#sudo sed -i 's/^Name=Hyprland/Name=Hyprland Wayland/g' /usr/share/wayland-sessions/hyprland.desktop
-#sudo sed -i 's/^Exec=Hyprland/Exec=~\/.config\/hypr\/launch-hyprland/g' /usr/share/wayland-sessions/hyprland.desktop
+mkdir -p $HYPR_CONFIG_HOME
+yes | cp -Rf config/* $HYPR_CONFIG_HOME/
+yes | cp -Rf resources/wallpaper.png $HYPR_CONFIG_HOME/hypr
+
+chmod +x $HYPR_CONFIG_HOME/hypr/launch-hyprland
+chmod +x $HYPR_CONFIG_HOME/waybar/launch-waybar
+chmod +x $HYPR_CONFIG_HOME/eww/launch-eww
+chmod +x $HYPR_CONFIG_HOME/hypr/bin/generate-hyprpaper
+
+sudo sed -i "s|^Exec=.*|Exec=$HYPR_CONFIG_HOME/hypr/launch-hyprland|g" /usr/share/wayland-sessions/hyprland.desktop
 
 ### Script is done ###
-echo -e "${YELLOW}==>${WHITE} Script had completed. Now you can reboot to apply all settings${NC}"
+echo -e "${GREEN}==>${WHITE} Script had completed. Now you can reboot to apply all settings${NC}"

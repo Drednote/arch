@@ -2,11 +2,11 @@
 
 monitors=($(hyprctl monitors | grep 'Monitor' | awk '{ print $2 }'))
 
-cat > ~/.config/hypr/hyprpaper.conf << EOF
+cat > $HYPR_CONFIG_HOME/hypr/hyprpaper.conf << EOF
 ipc = off
-preload = ~/.config/hypr/wallpaper.png
+preload = $HYPR_CONFIG_HOME/hypr/wallpaper.png
 EOF
 
 for monitor in "${monitors[@]}"; do
-    echo "wallpaper = $monitor,~/.config/hypr/wallpaper.png" >> ~/.config/hypr/hyprpaper.conf
+    echo "wallpaper = $monitor,$HYPR_CONFIG_HOME/hypr/wallpaper.png" >> $HYPR_CONFIG_HOME/hypr/hyprpaper.conf
 done

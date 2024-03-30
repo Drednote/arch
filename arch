@@ -1,6 +1,7 @@
 #!/bin/bash
 
 RED='\033[0;31m'
+GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 NC='\033[0m' # No Color
@@ -19,6 +20,7 @@ fi
 
 read -p "$(echo -e ${WHITE}"Configure nvidia drivers? (y,n) ${NC}")" NVIDIA
 # see https://github.com/korvahannu/arch-nvidia-drivers-installation-guide?tab=readme-ov-file
+# https://wiki.hyprland.org/Nvidia/
 if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
     sudo pacman -S nvidia-dkms nvidia-dkms-utils linux-headers qt6-wayland qt6ct libva
     #Additionally libva-nvidia-driver-git (AUR) to fix crashes in some Electron-based applications, such as Unity Hub.
@@ -40,6 +42,11 @@ if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
 fi
 
 source source/install/install-yay
+
+read -p "$(echo -e ${WHITE}"Configure Hyprland? (y,n) ${NC}")" HYPR
+if [[ $HYPR == "Y" || $HYPR == "y" ]]; then
+    source hyprland
+fi
 
 # Start the bluetooth service
 # echo -e "Starting the Bluetooth Service...\n"
