@@ -1,9 +1,15 @@
 #!/bin/bash
 
+RED='\033[0;31m'
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+WHITE='\033[1;37m'
+NC='\033[0m' # No Color
+
 #### Check for yay ####
 ISYAY=/sbin/yay
 if [ ! -f "$ISYAY" ]; then
-    read -p "$(echo -e ${WHITE}"Would you like to install yay? (y,n) ${NC}")" HYP
+    read -p "$(echo -e ${WHITE}"Would you like to install yay? (y,n) ${NC}")" YAY
     if [[ $YAY == "Y" || $YAY == "y" ]]; then
         CUR_PWD=$(pwd)
         cd /opt/ || exit
@@ -11,13 +17,13 @@ if [ ! -f "$ISYAY" ]; then
         sudo chown -R "$USER":"$USER" yay/
         cd /opt/yay/ || exit
         makepkg -si --noconfirm
-        echo -e "yay was installed\n"
-        cd $CUR_PWD
+        echo -e "${GREEN}==>${WHITE} yay was installed${NC}"
         
-        echo -e "update yay\n"
+        echo -e "${GREEN}==>${WHITE} Updating yay${NC}"
         yay -Suy --noconfirm
+        cd $CUR_PWD
     fi  
 else
-    echo -e "update yay\n"
+    echo -e "${GREEN}==>${WHITE} Updating yay${NC}"
     yay -Suy --noconfirm
 fi

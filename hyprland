@@ -39,6 +39,8 @@ while [[ $# -gt 0 ]]; do
   shift
 done
 
+source source/export-envs
+
 ### Install packages ####
 if [[ $to_install == true ]]; then
 
@@ -50,16 +52,12 @@ if [[ $to_install == true ]]; then
     dunst dolphin wofi
   yay -S --noconfirm rustup gtk-layer-shell eww
 
-  # Clean out other portals
-  yay -R --noconfirm xdg-desktop-portal-gnome xdg-desktop-portal-gtk
-
   #sudo sh install/eww/install-rust
   #sh install/eww/install-eww
 fi
 
 sudo systemctl enable sddm
 
-source source/export-envs
 echo -e "${GREEN}==>${WHITE} hypr config home = $HYPR_CONFIG_HOME${NC}"
 
 mkdir -p $HYPR_CONFIG_HOME

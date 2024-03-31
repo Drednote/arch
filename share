@@ -5,7 +5,7 @@ arr2=($(find source -type f))
 
 CONFIG_FILES=""
 for f in "${arr[@]}"; do
-    echo $f
+    #echo $f
     CONFIG_FILES+="$f "
 done
 
@@ -26,6 +26,7 @@ do_share() {
     chmod +x ~/.config/hypr/launch-hyprland
     chmod +x ~/.config/waybar/launch-waybar
     chmod +x ~/.config/hypr/launch-hyprpaper
+    chmod +x ~/.config/hypr/bin/generate-hyprpaper
 }
 
 #while true; do

@@ -6,3 +6,5 @@ while read line; do
         echo "$line" | envsubst | tee -a ~/.bashrc
     fi
 done < "$(pwd)/resources/envs.env"
+
+source ~/.bashrc
