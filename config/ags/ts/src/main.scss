@@ -1,0 +1,21 @@
+window.bar {
+  background-color: transparent;
+  color: white;
+}
+
+window.dock {
+  background-color: transparent;
+  color: white;
+}
+
+button {
+  min-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+}
+
+levelbar block,
+highlight {
+  min-height: 10px;
+}

@@ -11,26 +11,51 @@ done
 
 #echo $CONFIG_FILES
 
+to_copy=true
+
+# Цикл для обработки всех аргументов
+while [[ $# -gt 0 ]]; do
+    key="$1"
+    case $key in
+    --no-copy)
+        to_copy=false
+        ;;
+    *)
+        # Обработка неизвестных аргументов
+        echo "Неизвестный аргумент: $1"
+        ;;
+    esac
+    shift
+done
+
 do_share() {
-    for f in "${arr[@]}"; do
-        sed -i 's/\r$//' "$f"
-    done
+#    for f in "${arr[@]}"; do
+#      if [[ $f != *"node_modules"* && $f != *"/types/"* && $f != *".ts" ]]; then
+#        sed -i 's/\r$//' "$f"
+#      fi
+#    done
     for f in "${arr2[@]}"; do
-        sed -i 's/\r$//' "$f"
+      sed -i 's/\r$//' "$f"
     done
 
-    yes | cp -Rf config/* ~/.config/
-    rm -f ~/.config/hypr/wallpaper.png
-    yes | cp -Rf resources/wallpaper.png ~/.config/hypr
+    sed -i 's/\r$//' "arch"
+    sed -i 's/\r$//' "hyprland"
 
-    chmod +x ~/.config/hypr/launch-hyprland
-    chmod +x ~/.config/waybar/launch-waybar
-    chmod +x ~/.config/hypr/launch-hyprpaper
-    chmod +x ~/.config/hypr/bin/generate-hyprpaper
+    if [[ $to_copy == true ]]; then
+        rsync -avh --exclude='ags/ts/node_modules' --exclude='ags/ts/types' config/ ~/.config
+
+        rm -f ~/.config/hypr/wallpaper.png
+        yes | cp -Rf resources/wallpaper.png ~/.config/hypr
+
+        chmod +x ~/.config/hypr/launch-hyprland
+        chmod +x ~/.config/waybar/launch-waybar
+        chmod +x ~/.config/hypr/launch-hyprpaper
+        chmod +x ~/.config/hypr/bin/generate-hyprpaper
+    fi
 }
 
 #while true; do
 #    do_share &
 #    inotifywait -e create,modify $CONFIG_FILES
-    do_share
+do_share
 #done

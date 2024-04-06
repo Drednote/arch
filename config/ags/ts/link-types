@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ln /usr/share/com.github.Aylur.ags/types types
+chown -R "$USER":"$USER" types

@@ -1,0 +1,4 @@
+hyprpm update
+ags types # only for develop
+sudo pacman -Syu
+yay -Syu

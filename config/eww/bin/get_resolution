@@ -1,0 +1,44 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+    echo "Необходимо указать номер экрана и значение для вычитания"
+    exit 1
+fi
+
+screen=""
+number=""
+f="-f1"
+
+while [[ $# -gt 0 ]]; do
+    key="$1"
+
+    case $key in
+    --vertical)
+        f="-f2"
+        shift
+        ;;
+    --horizontal)
+        f="-f1"
+        shift
+        ;;
+    *)
+        if [ -z "$screen" ]; then
+            screen="$1"
+        elif [ -z "$number" ]; then
+            number="$1"
+        else
+            echo "Слишком много параметров"
+            exit 1
+        fi
+        shift
+        ;;
+    esac
+done
+
+if [ -z "$screen" ] || [ -z "$number" ]; then
+    echo "Необходимо указать номер экрана и значение для вычитания"
+    exit 1
+fi
+
+X=$(xrandr --screen $screen | grep '*' | uniq | awk '{print $1}' | cut -d 'x' $f)
+echo $(($X - $number))

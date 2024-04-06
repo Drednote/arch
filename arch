@@ -8,6 +8,8 @@ NC='\033[0m' # No Color
 
 sudo pacman -Syu --noconfirm wget vim
 
+source source/zsh/init
+
 #### Dual boot ####
 read -p "$(echo -e ${WHITE}"Configure dualboot? (y,n) ${NC}")" DUAL
 if [[ $DUAL == "Y" || $DUAL == "y" ]]; then
@@ -31,7 +33,7 @@ if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
     
     sudo sed -i '/^MODULES=(.*/ s/.$//' /etc/mkinitcpio.conf
     sudo sed -i '/^MODULES=(.*/ s/$/ nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    sudo sed -i '/^HOOKS=(.*kms.*/ s/kms//' /etc/mkinitcpio.conf
+    # sudo sed -i '/^HOOKS=(.*kms.*/ s/kms//' /etc/mkinitcpio.conf
     sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 
     echo "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
@@ -41,14 +43,17 @@ if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
     #sudo mv ./nvidia.hook /etc/pacman.d/hooks/
 fi
 
-source source/install/install-yay
+source source/install/yay
 
 read -p "$(echo -e ${WHITE}"Configure Hyprland? (y,n) ${NC}")" HYPR
 if [[ $HYPR == "Y" || $HYPR == "y" ]]; then
-    source hyprland
+    source ./hyprland
 fi
 
 # Start the bluetooth service
 # echo -e "Starting the Bluetooth Service...\n"
 # sudo systemctl enable --now bluetooth.service
 # sleep 2
+
+### Script is done ###
+echo -e "${GREEN}==>${WHITE} Script had completed. Now you can reboot to apply all settings${NC}"

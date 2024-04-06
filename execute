@@ -1,8 +1,7 @@
-#!/bin/bash 
+#!/bin/bash
 
-while read line; do
-    variable=$(echo "$line" | cut -d= -f1)
-    if ! grep -q "^$variable=" ~/.bashrc; then
-        echo "$line" | envsubst | tee -a ~/.bashrc
-    fi
-done < "$(pwd)/resources/envs.env"
+new_variables=$(cat $PWD/resources/envs.env | envsubst)
+
+export new_variables
+perl -0777 -pe 's/(# ENV_VARIABLES\n).*?(# END_ENV_VARIABLES)/$1$ENV{new_variables}\n$2/s' \
+    $HOME/vb/arch/source/zsh/.zshrc

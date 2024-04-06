@@ -2,10 +2,11 @@
 
 ## Run eww daemon if not running already
 if [[ ! `pidof eww` ]]; then
-	#${EWW} daemon
 	eww daemon
 	sleep 1
 fi
 
-#$EWW open bar
-eww open bar
+width=$(sh config/eww/bin/get_resolution 0 40 --horizontal)
+
+eww open bar --arg width="$width"px
+eww open dock

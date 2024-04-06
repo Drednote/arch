@@ -3,26 +3,51 @@
 (defpoll date :interval "1s" "date '+%d.%m.%Y'")
 (defpoll time :interval "1s" "date '+ %H:%M'")
 
-(defwindow bar
+(defwindow bar [width]
   :class "bar"
   :monitor 0
   :geometry (geometry
-    :x "0%"
+    :x "40px"
     :y "0"
-    :width "100%"
+    :width width
     :height "40px"
-    :anchor "top center"
+    :anchor "top left"
   )
   :stacking "fg"
   :exclusive true
   :focusable false
+  :namespace "bar"
   (system)
+)
+
+(defwindow dock
+  :class "dock"
+  :monitor 0
+  :geometry (geometry
+    :x "0"
+    :y "0px"
+    :height "100%"
+    :width "40px"
+    :anchor "top left"
+  )
+  :stacking "fg"
+  :exclusive true
+  :focusable false
+  :namespace "dock"
+  "e"
 )
 
 ; (defwidget system []
   ;   (box :orientation "horizontal" :class "date" :halign "end"
     ;     (button :onclick "sh date_time ${is_date}" {is_date ? date : time})
   ;   )
+; )
+
+; not work
+; (defwidget ram []
+;   (box :orientation "horizontal" :halign "center"
+;     (label {EWW_RAM.avalaible_mem})
+;   )
 ; )
 
 (defwidget system []

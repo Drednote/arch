@@ -1,0 +1,17 @@
+{
+    "name": "ags-dotfiles",
+    "author": "Ivan",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Drednote/arch.git"
+    },
+    "devDependencies": {
+        "@girs/accountsservice-1.0": "^1.0.0-3.2.7",
+        "@typescript-eslint/eslint-plugin": "^6.20.0",
+        "eslint-config-prettier": "9.0.0",
+        "eslint-plugin-prettier": "5.0.0",
+        "prettier": "3.0.3",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3"
+    }
+}

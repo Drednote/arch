@@ -39,21 +39,30 @@ while [[ $# -gt 0 ]]; do
   shift
 done
 
-source source/export-envs
+source resources/envs.env
 
 ### Install packages ####
 if [[ $to_install == true ]]; then
 
-  source source/install/install-yay
-  sudo pacman -S --noconfirm inotify-tools libnotify
+  source source/install/yay
 
-  sudo pacman -S --noconfirm sddm foot hyprland otf-font-awesome ttf-jetbrains-mono \
-    hyprpaper xdg-desktop-portal-hyprland qt6-wayland \
-    dunst dolphin wofi
-  yay -S --noconfirm rustup gtk-layer-shell eww
+  #  cpio cmake meson - for hyprpm
+  sudo pacman -S --noconfirm hyprpaper xdg-desktop-portal-hyprland qt6-wayland \
+    otf-font-awesome ttf-jetbrains-mono inotify-tools libnotify libdbusmenu-gtk3 sassc \
+    dunst dolphin wofi sddm foot \
+    cpio cmake meson unzip
+  #yay -S --noconfirm rustup gtk-layer-shell eww # navbar
+  yay -S --noconfirm hyprland-git aylurs-gtk-shell # https://aylur.github.io/ags-docs/config/installation/
 
   #sudo sh install/eww/install-rust
-  #sh install/eww/install-eww
+  source source/install/bun
+fi
+
+# plugins like hyprbars
+read -p "$(echo -e ${WHITE}"Configure Hyprland plugins? (y,n) ${NC}")" HYPR_PLUG
+if [[ $HYPR_PLUG == "Y" || $HYPR_PLUG == "y" ]]; then
+  hyprpm update -v
+  hyprpm add https://github.com/hyprwm/hyprland-plugins.git -v
 fi
 
 sudo systemctl enable sddm
@@ -70,6 +79,3 @@ chmod +x $HYPR_CONFIG_HOME/eww/launch-eww
 chmod +x $HYPR_CONFIG_HOME/hypr/bin/generate-hyprpaper
 
 sudo sed -i "s|^Exec=.*|Exec=$HYPR_CONFIG_HOME/hypr/launch-hyprland|g" /usr/share/wayland-sessions/hyprland.desktop
-
-### Script is done ###
-echo -e "${GREEN}==>${WHITE} Script had completed. Now you can reboot to apply all settings${NC}"
