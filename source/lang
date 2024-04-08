@@ -1,0 +1,25 @@
+#!/bin/bash
+
+sudo sed -i "s|^#ru_RU.UTF-8|ru_RU.UTF-8|g" /etc/locale.gen
+sudo locale-gen
+
+sudo sed -i "s|^LANG=en_US.UTF-8|LANG=ru_RU.UTF-8|g" /etc/locale.conf
+
+#sudo tee -a /etc/locale.conf << EOF
+#     LANG=en_US.UTF-8
+#     LC_CTYPE="en_US.UTF-8"
+#     LC_NUMERIC="en_US.UTF-8"
+#     LC_TIME="en_US.UTF-8"
+#     LC_COLLATE="en_US.UTF-8"
+#     LC_MONETARY="en_US.UTF-8"
+#     LC_MESSAGES="en_US.UTF-8"
+#     LC_PAPER="en_US.UTF-8"
+#     LC_NAME="en_US.UTF-8"
+#     LC_ADDRESS="en_US.UTF-8"
+#     LC_TELEPHONE="en_US.UTF-8"
+#     LC_MEASUREMENT="en_US.UTF-8"
+#     LC_IDENTIFICATION="en_US.UTF-8"
+#     LC_ALL=
+#EOF
+
+# https://wiki.archlinux.org/title/Locale_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)

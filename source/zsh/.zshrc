@@ -72,6 +72,11 @@ HIST_STAMPS="mm.dd.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+# append
+path+=("$BUN_INSTALL/bin")
+# export to sub-processes (make it inherited by child processes)
+export PATH
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration

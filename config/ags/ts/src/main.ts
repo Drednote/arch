@@ -1,6 +1,6 @@
 import Dock from './components/dock/Dock'
 import { applauncher } from './components/Example'
-import Bar from './components/Bar'
+import Bar from './components/bar/Bar'
 
 const css = `/tmp/ags/my-style.css`
 
@@ -11,5 +11,6 @@ App.config({
   windows: [
     // applauncher,
     Dock(),
+    Bar(),
   ],
 })

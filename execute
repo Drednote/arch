@@ -1,7 +1,3 @@
 #!/bin/bash
 
-new_variables=$(cat $PWD/resources/envs.env | envsubst)
-
-export new_variables
-perl -0777 -pe 's/(# ENV_VARIABLES\n).*?(# END_ENV_VARIABLES)/$1$ENV{new_variables}\n$2/s' \
-    $HOME/vb/arch/source/zsh/.zshrc
+hyprpm add https://github.com/hyprwm/hyprland-plugins.git -v

@@ -6,5 +6,6 @@
 # export EWW=/usr/bin/eww/./eww
 # export WLR_NO_HARDWARE_CURSORS=1
 # export WLR_RENDERER_ALLOW_SOFTWARE=1
+export PATH=$PATH:$HOME/.bun/bin
 
 exec Hyprland

@@ -1,10 +1,8 @@
+import Language from './Language'
+
 const hyprland = await Service.import('hyprland')
 const notifications = await Service.import('notifications')
-const mpris = await Service.import('mpris')
 const audio = await Service.import('audio')
-const battery = await Service.import('battery')
-const systemtray = await Service.import('systemtray')
-const applications = await Service.import('applications')
 
 const date = Variable('', {
   poll: [1000, 'date "+%H:%M:%S %b %e."'],
@@ -13,53 +11,6 @@ const date = Variable('', {
 // widgets can be only assigned as a child in one container
 // so to make a reuseable widget, make it a function
 // then you can simply instantiate one by calling it
-
-const AppItem = (app: Application | undefined) =>
-  Widget.Button({
-    // on_clicked: () => {
-    //   App.closeWindow(WINDOW_NAME)
-    //   app.launch()
-    // },
-    attribute: { app },
-    child: Widget.Icon({
-      icon: app?.icon_name || '',
-      size: 42,
-    }),
-  })
-
-function DockWidget() {
-  const apps = hyprland.bind('clients').as((cl) => {
-    console.log('cl -> ', cl)
-
-    const a = cl
-      .map((client) => applications.list.find((app) => app.match(client.class)))
-      .filter((cl) => cl !== undefined)
-      .map(AppItem)
-    console.log('a -> ', a)
-    return a
-  })
-  // const apps = Utils.watch([], hyprland, 'changed', () => {
-  //   return hyprland.clients
-  //     .map((client) => applications.list.find((app) => app.match(client.class)))
-  //     .filter((cl) => cl !== undefined)
-  //     .map(AppItem)
-  // })
-
-  console.log('apps -> ', apps)
-  return Widget.Box({
-    vertical: true,
-    children: apps,
-    css: `min-width: ${200}px;` + `min-height: 100%; background-color: white`,
-  })
-  // .hook(
-  //   hyprland,
-  //   (self) => {
-  //     self.children = apps.map((app) => AppItem(app))
-  //     self.vertical = true
-  //   },
-  //   'changed',
-  // ),
-}
 
 function Workspaces() {
   const activeId = hyprland.active.workspace.bind('id')
@@ -112,25 +63,6 @@ function Notification() {
   })
 }
 
-function Media() {
-  const label = Utils.watch('', mpris, 'player-changed', () => {
-    if (mpris.players[0]) {
-      const { track_artists, track_title } = mpris.players[0]
-      return `${track_artists.join(', ')} - ${track_title}`
-    } else {
-      return 'Nothing is playing'
-    }
-  })
-
-  return Widget.Button({
-    class_name: 'media',
-    on_primary_click: () => mpris.getPlayer('')?.playPause(),
-    on_scroll_up: () => mpris.getPlayer('')?.next(),
-    on_scroll_down: () => mpris.getPlayer('')?.previous(),
-    child: Widget.Label({ label }),
-  })
-}
-
 function Volume() {
   const icons = {
     101: 'overamplified',
@@ -171,55 +103,18 @@ function Volume() {
   })
 }
 
-function BatteryLabel() {
-  const value = battery.bind('percent').as((p) => (p > 0 ? p / 100 : 0))
-  const icon = battery
-    .bind('percent')
-    .as((p) => `battery-level-${Math.floor(p / 10) * 10}-symbolic`)
-
-  return Widget.Box({
-    class_name: 'battery',
-    visible: battery.bind('available'),
-    children: [
-      Widget.Icon({ icon }),
-      Widget.LevelBar({
-        widthRequest: 140,
-        vpack: 'center',
-        value,
-      }),
-    ],
-  })
-}
-
-function SysTray() {
-  const items = systemtray.bind('items').as((items) =>
-    items.map((item) =>
-      Widget.Button({
-        child: Widget.Icon({ icon: item.bind('icon') }),
-        on_primary_click: (_, event) => item.activate(event),
-        on_secondary_click: (_, event) => item.openMenu(event),
-        tooltip_markup: item.bind('tooltip_markup'),
-      }),
-    ),
-  )
-
-  return Widget.Box({
-    children: items,
-  })
-}
-
 // layout of the bar
 function Left() {
   return Widget.Box({
     spacing: 8,
-    children: [DockWidget(), ClientTitle()],
+    children: [Workspaces(), ClientTitle()],
   })
 }
 
 function Center() {
   return Widget.Box({
     spacing: 8,
-    children: [Media(), Notification()],
+    children: [Notification()],
   })
 }
 
@@ -227,7 +122,7 @@ function Right() {
   return Widget.Box({
     hpack: 'end',
     spacing: 8,
-    children: [Volume(), BatteryLabel(), Clock(), SysTray()],
+    children: [Language(), Volume(), Clock()],
   })
 }
 

@@ -6,9 +6,17 @@ YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 NC='\033[0m' # No Color
 
-sudo pacman -Syu --noconfirm wget vim
+sudo pacman -Syu --noconfirm vim
 
-source source/zsh/init
+read -p "$(echo -e ${WHITE}"Configure Zsh? Zsh is requiring for further installation (y,n) ${NC}")" ZSH
+if [[ $ZSH == "Y" || $ZSH == "y" ]]; then
+    source source/zsh/init
+fi
+
+read -p "$(echo -e ${WHITE}"Configure RUS language? (y,n) ${NC}")" LANG
+if [[ $LANG == "Y" || $LANG == "y" ]]; then
+    source source/lang
+fi
 
 #### Dual boot ####
 read -p "$(echo -e ${WHITE}"Configure dualboot? (y,n) ${NC}")" DUAL
@@ -47,7 +55,7 @@ source source/install/yay
 
 read -p "$(echo -e ${WHITE}"Configure Hyprland? (y,n) ${NC}")" HYPR
 if [[ $HYPR == "Y" || $HYPR == "y" ]]; then
-    source ./hyprland
+    source source/hyprland
 fi
 
 # Start the bluetooth service
@@ -57,3 +65,4 @@ fi
 
 ### Script is done ###
 echo -e "${GREEN}==>${WHITE} Script had completed. Now you can reboot to apply all settings${NC}"
+echo -e "${GREEN}==>${WHITE} After reboot execute 'after_install.sh' to complete installation${NC}"

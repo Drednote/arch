@@ -1,0 +1,36 @@
+#!/bin/bash
+
+OP=$1
+shift
+
+# only for get. For change always name
+key=""
+
+# Цикл для обработки всех аргументов
+while [[ $# -gt 0 ]]; do
+  key="$1"
+  case $key in
+  --name)
+    key=".name"
+    ;;
+  --layout)
+      key=".active_keymap"
+      ;;
+  *)
+    # Обработка неизвестных аргументов
+    echo "Неизвестный аргумент: $1"
+    ;;
+  esac
+  shift
+done
+
+
+if [[ "$OP" == "get" ]]; then
+  hyprctl devices -j | jq -r ".keyboards[] | select(.main == true) | $key"
+elif [ "$OP" == "change" ]; then
+  hyprctl switchxkblayout "$(hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) | .name')" next
+else
+  echo "Unknown argument $OP"
+  exit 0
+fi
+

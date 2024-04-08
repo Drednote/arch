@@ -29,23 +29,24 @@ while [[ $# -gt 0 ]]; do
 done
 
 do_share() {
-#    for f in "${arr[@]}"; do
-#      if [[ $f != *"node_modules"* && $f != *"/types/"* && $f != *".ts" ]]; then
-#        sed -i 's/\r$//' "$f"
-#      fi
-#    done
+    for f in "${arr[@]}"; do
+      if [[ $f != *"node_modules"* && $f != *"/types/"* && $f != *".ts" ]]; then
+        sed -i 's/\r$//' "$f"
+      fi
+    done
     for f in "${arr2[@]}"; do
       sed -i 's/\r$//' "$f"
     done
 
-    sed -i 's/\r$//' "arch"
-    sed -i 's/\r$//' "hyprland"
+    sed -i 's/\r$//' "install.sh"
+    sed -i 's/\r$//' "after_install.sh"
+    sed -i 's/\r$//' "source/hyprland"
 
     if [[ $to_copy == true ]]; then
         rsync -avh --exclude='ags/ts/node_modules' --exclude='ags/ts/types' config/ ~/.config
 
         rm -f ~/.config/hypr/wallpaper.png
-        yes | cp -Rf resources/wallpaper.png ~/.config/hypr
+        cp -Rf resources/wallpaper.png ~/.config/hypr
 
         chmod +x ~/.config/hypr/launch-hyprland
         chmod +x ~/.config/waybar/launch-waybar
