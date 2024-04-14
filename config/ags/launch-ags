@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#CONFIG_FILES="$(find "$HYPR_CONFIG_HOME"/ags/ts/src -type f)"
-#
-#trap "killall ags" EXIT
+#CONFIG_FILES="$(find "$CONFIG_HOME"/ags/ts/src -type f)"
+
+#trap "ags -q" EXIT
 #
 #while true; do
 #    ags &
 #    inotifywait -e create,modify "$CONFIG_FILES"
-#    killall ags
+#    ags -q
 #done
 ags -q
 ags &

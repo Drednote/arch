@@ -1,0 +1,19 @@
+#!/bin/bash
+
+sudo pacman -S nvidia-dkms nvidia-dkms-utils linux-headers qt6-wayland qt6ct libva
+#Additionally libva-nvidia-driver-git (AUR) to fix crashes in some Electron-based applications, such as Unity Hub.
+
+sudo sed -i '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/.$//' /etc/default/grub
+sudo sed -i '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/$/ nvidia-drm.modeset=1"/' /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+sudo sed -i '/^MODULES=(.*/ s/.$//' /etc/mkinitcpio.conf
+sudo sed -i '/^MODULES=(.*/ s/$/ nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+# sudo sed -i '/^HOOKS=(.*kms.*/ s/kms//' /etc/mkinitcpio.conf
+sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
+
+echo "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
+
+#wget https://raw.githubusercontent.com/korvahannu/arch-nvidia-drivers-installation-guide/main/nvidia.hook
+#sudo mkdir -p /etc/pacman.d/hooks
+#sudo mv ./nvidia.hook /etc/pacman.d/hooks/

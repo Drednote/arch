@@ -24,7 +24,6 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     'no-unused-vars': 'off',
-    'max-len': ['error', {code: 100}],
     '@typescript-eslint/no-var-requires': 0,
   },
   globals: {

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sh "$HYPR_CONFIG_HOME"/hypr/bin/generate-hyprpaper
+sh "$HYPR_CONFIG_HOME"/bin/generate-hyprpaper
 
 hyprpaper

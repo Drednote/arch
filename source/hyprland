@@ -57,15 +57,15 @@ fi
 
 sudo systemctl enable sddm
 
-echo -e "${GREEN}==>${WHITE} hypr config home = $HYPR_CONFIG_HOME${NC}"
+echo -e "${GREEN}==>${WHITE} hypr config home = $CONFIG_HOME${NC}"
 
-mkdir -p "$HYPR_CONFIG_HOME"
-yes | cp -Rf config/* $HYPR_CONFIG_HOME/
-yes | cp -Rf resources/wallpaper.png $HYPR_CONFIG_HOME/hypr
+mkdir -p "$CONFIG_HOME"
+yes | cp -Rf config/* $CONFIG_HOME/
+yes | cp -Rf resources/wallpaper.png $CONFIG_HOME/hypr
 
-chmod +x "$HYPR_CONFIG_HOME"/hypr/launch-hyprland
-chmod +x "$HYPR_CONFIG_HOME"/waybar/launch-waybar
-chmod +x "$HYPR_CONFIG_HOME"/eww/launch-eww
-chmod +x "$HYPR_CONFIG_HOME"/hypr/bin/generate-hyprpaper
+chmod +x "$CONFIG_HOME"/hypr/launch-hyprland
+chmod +x "$CONFIG_HOME"/waybar/launch-waybar
+chmod +x "$CONFIG_HOME"/eww/launch-eww
+chmod +x "$CONFIG_HOME"/hypr/bin/generate-hyprpaper
 
-sudo sed -i "s|^Exec=.*|Exec=$HYPR_CONFIG_HOME/hypr/launch-hyprland|g" /usr/share/wayland-sessions/hyprland.desktop
+sudo sed -i "s|^Exec=.*|Exec=$CONFIG_HOME/hypr/launch-hyprland|g" /usr/share/wayland-sessions/hyprland.desktop

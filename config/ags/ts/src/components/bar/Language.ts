@@ -24,12 +24,12 @@ function Language() {
   // hyprland.connect('keyboard-layout', (_, ...args) => {
   //   console.log('args -> ', args)
   // })
-  const lang = bash('$HYPR_SCRIPTS_HOME/lang get --layout')
+  const lang = bash('$HYPR_CONFIG_HOME/scripts/lang get --layout')
 
   const code = getLangCode(lang)
 
   return Widget.Button({
-    onClicked: () => bash('$HYPR_SCRIPTS_HOME/lang change'),
+    onClicked: () => bash('$HYPR_CONFIG_HOME/scripts/lang change'),
     child: Widget.Label({
       class_name: 'lang',
       setup: (self) =>

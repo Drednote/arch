@@ -6,7 +6,14 @@ YELLOW='\033[1;33m'
 WHITE='\033[1;37m'
 NC='\033[0m' # No Color
 
-sudo pacman -Syu --noconfirm vim
+UTILS="vim htop nvtop"
+
+sudo pacman -Syu --noconfirm
+
+read -p "$(echo -e ${WHITE}"Install $UTILS? (y,n) ${NC}")" UT
+if [[ $UT == "Y" || $UT == "y" ]]; then
+    sudo pacman -S --noconfirm "$UTILS"
+fi
 
 read -p "$(echo -e ${WHITE}"Configure Zsh? Zsh is requiring for further installation (y,n) ${NC}")" ZSH
 if [[ $ZSH == "Y" || $ZSH == "y" ]]; then
@@ -21,34 +28,14 @@ fi
 #### Dual boot ####
 read -p "$(echo -e ${WHITE}"Configure dualboot? (y,n) ${NC}")" DUAL
 if [[ $DUAL == "Y" || $DUAL == "y" ]]; then
-    sudo pacman -S --noconfirm grub efibootmgr dosfstools mtools os-prober
-    sudo grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-    sudo sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
+  source source/dualboot
 fi
 
 read -p "$(echo -e ${WHITE}"Configure nvidia drivers? (y,n) ${NC}")" NVIDIA
 # see https://github.com/korvahannu/arch-nvidia-drivers-installation-guide?tab=readme-ov-file
 # https://wiki.hyprland.org/Nvidia/
 if [[ $NVIDIA == "Y" || $NVIDIA == "y" ]]; then
-    sudo pacman -S nvidia-dkms nvidia-dkms-utils linux-headers qt6-wayland qt6ct libva
-    #Additionally libva-nvidia-driver-git (AUR) to fix crashes in some Electron-based applications, such as Unity Hub.
-    
-    sudo sed -i '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/.$//' /etc/default/grub
-    sudo sed -i '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/$/ nvidia-drm.modeset=1"/' /etc/default/grub
-    sudo grub-mkconfig -o /boot/grub/grub.cfg
-    
-    sudo sed -i '/^MODULES=(.*/ s/.$//' /etc/mkinitcpio.conf
-    sudo sed -i '/^MODULES=(.*/ s/$/ nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    # sudo sed -i '/^HOOKS=(.*kms.*/ s/kms//' /etc/mkinitcpio.conf
-    sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
-
-    echo "options nvidia-drm modeset=1" | sudo tee -a /etc/modprobe.d/nvidia.conf
-    
-    #wget https://raw.githubusercontent.com/korvahannu/arch-nvidia-drivers-installation-guide/main/nvidia.hook
-    #sudo mkdir -p /etc/pacman.d/hooks
-    #sudo mv ./nvidia.hook /etc/pacman.d/hooks/
+    source source/nvidia
 fi
 
 source source/install/yay

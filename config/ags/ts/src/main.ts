@@ -1,6 +1,6 @@
 import Dock from './components/dock/Dock'
-import { applauncher } from './components/Example'
 import Bar from './components/bar/Bar'
+import { windowListener } from './listener/WindowListener'
 
 const css = `/tmp/ags/my-style.css`
 
@@ -10,6 +10,7 @@ App.config({
   style: css,
   windows: [
     // applauncher,
+    windowListener,
     Dock(),
     Bar(),
   ],
