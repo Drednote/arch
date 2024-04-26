@@ -44,17 +44,17 @@ panelbottom.addWidget("org.kde.plasma.panelspacer")
 
 /*systemtray*/
 const systraprev = panelbottom.addWidget("org.kde.plasma.systemtray")
-const SystrayContainmentId = systraprev.readConfig("SystrayContainmentId")
-const systray = desktopById(SystrayContainmentId)
-systray.currentGlobalConfigGroup = [""]
-systray.writeGlobalConfig("popupHeight", 430)
-systray.writeGlobalConfig("popupWidth", 320)
-systray.currentConfigGroup = ["General"]
+// const SystrayContainmentId = systraprev.readConfig("SystrayContainmentId")
+// const systray = desktopById(SystrayContainmentId)
+// systray.currentGlobalConfigGroup = [""]
+// systray.writeGlobalConfig("popupHeight", 430)
+// systray.writeGlobalConfig("popupWidth", 320)
+// systray.currentConfigGroup = ["General"]
 // const ListTrays = systray.readConfig("extraItems")
 // const ListTrays2 = ListTrays.replace(",org.kde.plasma.notifications", "")
 // systray.writeConfig("extraItems", ListTrays2)
-systray.writeConfig("iconSpacing", 1)
-systray.writeConfig("shownItems", "org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement")
+// systray.writeConfig("iconSpacing", 1)
+// systray.writeConfig("shownItems", "org.kde.plasma.clipboard,org.kde.plasma.mediacontroller,org.kde.plasma.volume,org.kde.plasma.keyboardlayout,org.kde.plasma.networkmanagement")
 
 /*Cambiando configuracion Dolphin*/
 // const IconsStatic_dolphin = ConfigFile('dolphinrc')
