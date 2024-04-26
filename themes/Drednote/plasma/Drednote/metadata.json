@@ -1,0 +1,19 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Email": "test",
+        "Name": "Drednote"
+      }
+    ],
+    "Name": "Drednote",
+    "Description": "Drednote theme for plasma",
+    "Id": "Drednote",
+    "Version": "0.1",
+    "Category": "",
+    "EnabledByDefault": true,
+    "License": "GPL",
+    "Website": ""
+  },
+  "X-Plasma-API": "6.0"
+}

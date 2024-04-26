@@ -1,3 +1,13 @@
 #!/bin/bash
 
-hyprpm add https://github.com/hyprwm/hyprland-plugins.git -v
+Theme=Drednote
+
+
+#sh themes/"$Theme"/install.sh
+#lookandfeeltool -a Drednote
+
+#python themes/$Theme/bin/update-config.py --file $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc
+
+#sh source/bin/reload_kde
+
+qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logout

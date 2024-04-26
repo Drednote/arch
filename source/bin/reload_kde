@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -r ~/.cache/plasma*
+rm -r ~/.cache/kde*
+rm ~/.cache/ksvg-elements
+
+#plasmashell --replace &

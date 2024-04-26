@@ -19,7 +19,7 @@ echo -e "${GREEN}==>${WHITE} Install oh my zsh${NC}"
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 
 rm -f $HOME/.zshrc
-cp $CUR_PWD/source/zsh/.zshrc $HOME
+cp $CUR_PWD/source/bin/zsh/.zshrc $HOME
 # sudo chown -R "$USER":"$USER" $HOME/.zshrc
 
 new_variables=$(cat $CUR_PWD/resources/envs.env) # | envsubst)

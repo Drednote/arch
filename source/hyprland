@@ -52,7 +52,7 @@ if [[ $to_install == true ]]; then
   yay -S --noconfirm hyprland-git aylurs-gtk-shell # https://aylur.github.io/ags-docs/config/installation/
 
   #sudo sh install/eww/install-rust
-  source source/install/bun
+  source source/bin/install/bun
 fi
 
 sudo systemctl enable sddm

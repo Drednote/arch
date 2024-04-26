@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="187"
+   height="47"
+   viewBox="0 0 187 47"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="tasks.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#e1ffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="false"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     shape-rendering="auto"
+     inkscape:zoom="11.313709"
+     inkscape:cx="112.78353"
+     inkscape:cy="30.891726"
+     inkscape:window-width="3440"
+     inkscape:window-height="1360"
+     inkscape:window-x="-9"
+     inkscape:window-y="486"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     labelstyle="default">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="-318"
+       originy="-498"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-318,-498)">
+    <rect
+       style="fill:#ff0000;fill-opacity:0.599388"
+       id="normal-center"
+       width="15"
+       height="15"
+       x="330"
+       y="505"
+       inkscape:label="" />
+    <g
+       id="normal-right"
+       inkscape:label="#hover-right"
+       transform="translate(10)">
+      <rect
+         style="fill:#ff0000;fill-opacity:0.599388"
+         id="rect3"
+         width="4.9999995"
+         height="15"
+         x="335"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 340,520 v -15 h -1 v 15 z"
+         id="path8" />
+    </g>
+    <g
+       id="normal-top"
+       inkscape:label="#hover-top"
+       transform="translate(4.999)">
+      <rect
+         style="fill:#ff0000;fill-opacity:0.599388"
+         id="rect5"
+         width="15"
+         height="5.000001"
+         x="325.00101"
+         y="500" />
+      <path
+         style="fill:#000000;fill-opacity:0.98452"
+         d="m 340.001,500 h -15 v 1 h 15 v -1"
+         id="path9" />
+    </g>
+    <g
+       id="normal-topright"
+       inkscape:label="#hover-topright"
+       transform="translate(10)">
+      <g
+         id="g14">
+        <path
+           style="fill:#ff0000;fill-opacity:0.599388"
+           d="m 340,505 h -5 v -5 c 3,0 5,2.01563 5,5"
+           id="path10-80"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g13">
+        <path
+           style="fill:#000000;fill-opacity:1"
+           d="m 335,501 c 2.5,0 4,1.5 4,4 h 1 c 0,-3.01562 -2.00815,-5 -5,-5 v 1"
+           id="path11"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+    <g
+       id="normal-topleft"
+       inkscape:label="#hover-topleft"
+       transform="translate(10)">
+      <path
+         style="fill:#ff0000;fill-opacity:0.599388"
+         d="m 320,500 v 5 h -5 c 0,-3 2.01563,-5 5,-5"
+         id="path10"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 316,505 c 0,-2.5 1.5,-4 4,-4 v -1 c -3.01562,0 -5,2.00815 -5,5 h 0.9688"
+         id="path11-8"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="normal-bottomleft"
+       inkscape:label="#hover-bottomleft"
+       transform="translate(10)">
+      <path
+         style="fill:#ff0000;fill-opacity:0.599388"
+         d="m 315,520 h 5 v 5 c -3,0 -5,-2.01563 -5,-5"
+         id="path10-8"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 c -2.5,0 -4,-1.5 -4,-4 h -1 c 0,3.01562 2.00815,5 5,5 v -0.9688"
+         id="path11-8-6"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="normal-bottomright"
+       inkscape:label="#hover-bottomright"
+       transform="translate(10)">
+      <path
+         style="fill:#ff0000;fill-opacity:0.599388"
+         d="m 335,525 v -5 h 5 c 0,3 -2.01563,5 -5,5"
+         id="path10-6"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 339,520 c 0,2.5 -1.5,4 -4,4 v 1 c 3.01562,0 5,-2.00815 5,-5 h -0.9688"
+         id="path11-8-6-1"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="normal-left"
+       inkscape:label="#hover-left"
+       transform="translate(10)">
+      <rect
+         style="fill:#ff0000;fill-opacity:0.599388"
+         id="rect4"
+         width="5"
+         height="15"
+         x="315"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 315,505 h 1 v 15 h -1 z"
+         id="path12" />
+    </g>
+    <g
+       id="normal-bottom"
+       inkscape:label="#hover-bottom"
+       transform="translate(10)">
+      <rect
+         style="fill:#ff0000;fill-opacity:0.599388"
+         id="rect6"
+         width="15"
+         height="5"
+         x="320"
+         y="520" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 h 15 v 1 h -15"
+         id="path13" />
+    </g>
+    <rect
+       style="fill:#0000ff;fill-opacity:0.599388"
+       id="progress-center"
+       width="15"
+       height="15"
+       x="360"
+       y="505"
+       inkscape:label="" />
+    <g
+       id="progress-right"
+       inkscape:label="#hover-right"
+       transform="translate(40.000014)">
+      <rect
+         style="fill:#0000ff;fill-opacity:0.599388"
+         id="rect3-7"
+         width="4.9999995"
+         height="15"
+         x="335"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 340,520 v -15 h -1 v 15 z"
+         id="path8-5" />
+    </g>
+    <g
+       id="progress-top"
+       inkscape:label="#hover-top"
+       transform="translate(34.999014)">
+      <rect
+         style="fill:#0000ff;fill-opacity:0.599388"
+         id="rect5-0"
+         width="15"
+         height="5.000001"
+         x="325.00101"
+         y="500" />
+      <path
+         style="fill:#000000;fill-opacity:0.98452"
+         d="m 340.001,500 h -15 v 1 h 15 v -1"
+         id="path9-7" />
+    </g>
+    <g
+       id="progress-topright"
+       inkscape:label="#hover-topright"
+       transform="translate(40.000014)">
+      <g
+         id="g14-1">
+        <path
+           style="fill:#0000ff;fill-opacity:0.599388"
+           d="m 340,505 h -5 v -5 c 3,0 5,2.01563 5,5"
+           id="path10-80-7"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g13-3">
+        <path
+           style="fill:#000000;fill-opacity:1"
+           d="m 335,501 c 2.5,0 4,1.5 4,4 h 1 c 0,-3.01562 -2.00815,-5 -5,-5 v 1"
+           id="path11-3"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+    <g
+       id="progress-topleft"
+       inkscape:label="#hover-topleft"
+       transform="translate(40.000014)">
+      <path
+         style="fill:#0000ff;fill-opacity:0.599388"
+         d="m 320,500 v 5 h -5 c 0,-3 2.01563,-5 5,-5"
+         id="path10-0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 316,505 c 0,-2.5 1.5,-4 4,-4 v -1 c -3.01562,0 -5,2.00815 -5,5 h 0.9688"
+         id="path11-8-5"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="progress-bottomleft"
+       inkscape:label="#hover-bottomleft"
+       transform="translate(40.000014)">
+      <path
+         style="fill:#0000ff;fill-opacity:0.599388"
+         d="m 315,520 h 5 v 5 c -3,0 -5,-2.01563 -5,-5"
+         id="path10-8-0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 c -2.5,0 -4,-1.5 -4,-4 h -1 c 0,3.01562 2.00815,5 5,5 v -0.9688"
+         id="path11-8-6-0"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="progress-bottomright"
+       inkscape:label="#hover-bottomright"
+       transform="translate(40.000014)">
+      <path
+         style="fill:#0000ff;fill-opacity:0.599388"
+         d="m 335,525 v -5 h 5 c 0,3 -2.01563,5 -5,5"
+         id="path10-6-6"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 339,520 c 0,2.5 -1.5,4 -4,4 v 1 c 3.01562,0 5,-2.00815 5,-5 h -0.9688"
+         id="path11-8-6-1-1"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="progress-left"
+       inkscape:label="#hover-left"
+       transform="translate(40.000014)">
+      <rect
+         style="fill:#0000ff;fill-opacity:0.599388"
+         id="rect4-5"
+         width="5"
+         height="15"
+         x="315"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 315,505 h 1 v 15 h -1 z"
+         id="path12-9" />
+    </g>
+    <g
+       id="progress-bottom"
+       inkscape:label="#hover-bottom"
+       transform="translate(40.000014)">
+      <rect
+         style="fill:#0000ff;fill-opacity:0.599388"
+         id="rect6-8"
+         width="15"
+         height="5"
+         x="320"
+         y="520" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 h 15 v 1 h -15"
+         id="path13-6" />
+    </g>
+    <rect
+       style="fill:#00ff00;fill-opacity:0.599388"
+       id="focus-center"
+       width="15"
+       height="15"
+       x="390.00003"
+       y="505"
+       inkscape:label="" />
+    <g
+       id="focus-right"
+       inkscape:label="#hover-right"
+       transform="translate(70.000042)">
+      <rect
+         style="fill:#00ff00;fill-opacity:0.599388"
+         id="rect3-7-3"
+         width="4.9999995"
+         height="15"
+         x="335"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 340,520 v -15 h -1 v 15 z"
+         id="path8-5-9" />
+    </g>
+    <g
+       id="focus-top"
+       inkscape:label="#hover-top"
+       transform="translate(64.999042)">
+      <rect
+         style="fill:#00ff00;fill-opacity:0.599388"
+         id="rect5-0-7"
+         width="15"
+         height="5.000001"
+         x="325.00101"
+         y="500" />
+      <path
+         style="fill:#000000;fill-opacity:0.98452"
+         d="m 340.001,500 h -15 v 1 h 15 v -1"
+         id="path9-7-9" />
+    </g>
+    <g
+       id="focus-topright"
+       inkscape:label="#hover-topright"
+       transform="translate(70.000042)">
+      <g
+         id="g14-1-2">
+        <path
+           style="fill:#00ff00;fill-opacity:0.599388"
+           d="m 340,505 h -5 v -5 c 3,0 5,2.01563 5,5"
+           id="path10-80-7-7"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g13-3-6">
+        <path
+           style="fill:#000000;fill-opacity:1"
+           d="m 335,501 c 2.5,0 4,1.5 4,4 h 1 c 0,-3.01562 -2.00815,-5 -5,-5 v 1"
+           id="path11-3-0"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+    <g
+       id="focus-topleft"
+       inkscape:label="#hover-topleft"
+       transform="translate(70.000042)">
+      <path
+         style="fill:#00ff00;fill-opacity:0.599388"
+         d="m 320,500 v 5 h -5 c 0,-3 2.01563,-5 5,-5"
+         id="path10-0-9"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 316,505 c 0,-2.5 1.5,-4 4,-4 v -1 c -3.01562,0 -5,2.00815 -5,5 h 0.9688"
+         id="path11-8-5-9"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="focus-bottomleft"
+       inkscape:label="#hover-bottomleft"
+       transform="translate(70.000042)">
+      <path
+         style="fill:#00ff00;fill-opacity:0.599388"
+         d="m 315,520 h 5 v 5 c -3,0 -5,-2.01563 -5,-5"
+         id="path10-8-0-9"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 c -2.5,0 -4,-1.5 -4,-4 h -1 c 0,3.01562 2.00815,5 5,5 v -0.9688"
+         id="path11-8-6-0-4"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="focus-bottomright"
+       inkscape:label="#hover-bottomright"
+       transform="translate(70.000042)">
+      <path
+         style="fill:#00ff00;fill-opacity:0.599388"
+         d="m 335,525 v -5 h 5 c 0,3 -2.01563,5 -5,5"
+         id="path10-6-6-6"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 339,520 c 0,2.5 -1.5,4 -4,4 v 1 c 3.01562,0 5,-2.00815 5,-5 h -0.9688"
+         id="path11-8-6-1-1-3"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="focus-left"
+       inkscape:label="#hover-left"
+       transform="translate(70.000042)">
+      <rect
+         style="fill:#00ff00;fill-opacity:0.599388"
+         id="rect4-5-9"
+         width="5"
+         height="15"
+         x="315"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 315,505 h 1 v 15 h -1 z"
+         id="path12-9-0" />
+    </g>
+    <g
+       id="focus-bottom"
+       inkscape:label="#hover-bottom"
+       transform="translate(70.000042)">
+      <rect
+         style="fill:#00ff00;fill-opacity:0.599388"
+         id="rect6-8-8"
+         width="15"
+         height="5"
+         x="320"
+         y="520" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 h 15 v 1 h -15"
+         id="path13-6-6" />
+    </g>
+    <rect
+       style="fill:#00ffff;fill-opacity:0.599388"
+       id="minimized-center"
+       width="15"
+       height="15"
+       x="420.00006"
+       y="505"
+       inkscape:label="" />
+    <g
+       id="minimized-right"
+       inkscape:label="#hover-right"
+       transform="translate(100.00005)">
+      <rect
+         style="fill:#00ffff;fill-opacity:0.599388"
+         id="rect3-7-3-0"
+         width="4.9999995"
+         height="15"
+         x="335"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 340,520 v -15 h -1 v 15 z"
+         id="path8-5-9-2" />
+    </g>
+    <g
+       id="minimized-top"
+       inkscape:label="#hover-top"
+       transform="translate(94.999051)">
+      <rect
+         style="fill:#00ffff;fill-opacity:0.599388"
+         id="rect5-0-7-3"
+         width="15"
+         height="5.000001"
+         x="325.00101"
+         y="500" />
+      <path
+         style="fill:#000000;fill-opacity:0.98452"
+         d="m 340.001,500 h -15 v 1 h 15 v -1"
+         id="path9-7-9-2" />
+    </g>
+    <g
+       id="minimized-topright"
+       inkscape:label="#hover-topright"
+       transform="translate(100.00005)">
+      <g
+         id="g14-1-2-4">
+        <path
+           style="fill:#00ffff;fill-opacity:0.599388"
+           d="m 340,505 h -5 v -5 c 3,0 5,2.01563 5,5"
+           id="path10-80-7-7-0"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g13-3-6-8">
+        <path
+           style="fill:#000000;fill-opacity:1"
+           d="m 335,501 c 2.5,0 4,1.5 4,4 h 1 c 0,-3.01562 -2.00815,-5 -5,-5 v 1"
+           id="path11-3-0-5"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+    <g
+       id="minimized-topleft"
+       inkscape:label="#hover-topleft"
+       transform="translate(100.00005)">
+      <path
+         style="fill:#00ffff;fill-opacity:0.599388"
+         d="m 320,500 v 5 h -5 c 0,-3 2.01563,-5 5,-5"
+         id="path10-0-9-6"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 316,505 c 0,-2.5 1.5,-4 4,-4 v -1 c -3.01562,0 -5,2.00815 -5,5 h 0.9688"
+         id="path11-8-5-9-4"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="minimized-bottomleft"
+       inkscape:label="#hover-bottomleft"
+       transform="translate(100.00005)">
+      <path
+         style="fill:#00ffff;fill-opacity:0.599388"
+         d="m 315,520 h 5 v 5 c -3,0 -5,-2.01563 -5,-5"
+         id="path10-8-0-9-4"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 c -2.5,0 -4,-1.5 -4,-4 h -1 c 0,3.01562 2.00815,5 5,5 v -0.9688"
+         id="path11-8-6-0-4-2"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="minimized-bottomright"
+       inkscape:label="#hover-bottomright"
+       transform="translate(100.00005)">
+      <path
+         style="fill:#00ffff;fill-opacity:0.599388"
+         d="m 335,525 v -5 h 5 c 0,3 -2.01563,5 -5,5"
+         id="path10-6-6-6-2"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 339,520 c 0,2.5 -1.5,4 -4,4 v 1 c 3.01562,0 5,-2.00815 5,-5 h -0.9688"
+         id="path11-8-6-1-1-3-2"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="minimized-left"
+       inkscape:label="#hover-left"
+       transform="translate(100.00005)">
+      <rect
+         style="fill:#00ffff;fill-opacity:0.599388"
+         id="rect4-5-9-1"
+         width="5"
+         height="15"
+         x="315"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 315,505 h 1 v 15 h -1 z"
+         id="path12-9-0-4" />
+    </g>
+    <g
+       id="minimized-bottom"
+       inkscape:label="#hover-bottom"
+       transform="translate(100.00005)">
+      <rect
+         style="fill:#00ffff;fill-opacity:0.599388"
+         id="rect6-8-8-4"
+         width="15"
+         height="5"
+         x="320"
+         y="520" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 h 15 v 1 h -15"
+         id="path13-6-6-7" />
+    </g>
+    <rect
+       style="fill:#ff00ff;fill-opacity:0.599388"
+       id="attention-center"
+       width="15"
+       height="15"
+       x="450.00006"
+       y="505"
+       inkscape:label="" />
+    <g
+       id="attention-right"
+       inkscape:label="#hover-right"
+       transform="translate(130.00007)">
+      <rect
+         style="fill:#ff00ff;fill-opacity:0.599388"
+         id="rect3-7-3-0-5"
+         width="4.9999995"
+         height="15"
+         x="335"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 340,520 v -15 h -1 v 15 z"
+         id="path8-5-9-2-8" />
+    </g>
+    <g
+       id="attention-top"
+       inkscape:label="#hover-top"
+       transform="translate(124.99907)">
+      <rect
+         style="fill:#ff00ff;fill-opacity:0.599388"
+         id="rect5-0-7-3-6"
+         width="15"
+         height="5.000001"
+         x="325.00101"
+         y="500" />
+      <path
+         style="fill:#000000;fill-opacity:0.98452"
+         d="m 340.001,500 h -15 v 1 h 15 v -1"
+         id="path9-7-9-2-7" />
+    </g>
+    <g
+       id="attention-topright"
+       inkscape:label="#hover-topright"
+       transform="translate(130.00007)">
+      <g
+         id="g14-1-2-4-2">
+        <path
+           style="fill:#ff00ff;fill-opacity:0.599388"
+           d="m 340,505 h -5 v -5 c 3,0 5,2.01563 5,5"
+           id="path10-80-7-7-0-7"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g13-3-6-8-2">
+        <path
+           style="fill:#000000;fill-opacity:1"
+           d="m 335,501 c 2.5,0 4,1.5 4,4 h 1 c 0,-3.01562 -2.00815,-5 -5,-5 v 1"
+           id="path11-3-0-5-1"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+    <g
+       id="attention-topleft"
+       inkscape:label="#hover-topleft"
+       transform="translate(130.00007)">
+      <path
+         style="fill:#ff00ff;fill-opacity:0.599388"
+         d="m 320,500 v 5 h -5 c 0,-3 2.01563,-5 5,-5"
+         id="path10-0-9-6-1"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 316,505 c 0,-2.5 1.5,-4 4,-4 v -1 c -3.01562,0 -5,2.00815 -5,5 h 0.9688"
+         id="path11-8-5-9-4-6"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="attention-bottomleft"
+       inkscape:label="#hover-bottomleft"
+       transform="translate(130.00007)">
+      <path
+         style="fill:#ff00ff;fill-opacity:0.599388"
+         d="m 315,520 h 5 v 5 c -3,0 -5,-2.01563 -5,-5"
+         id="path10-8-0-9-4-8"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 c -2.5,0 -4,-1.5 -4,-4 h -1 c 0,3.01562 2.00815,5 5,5 v -0.9688"
+         id="path11-8-6-0-4-2-7"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="attention-bottomright"
+       inkscape:label="#hover-bottomright"
+       transform="translate(130.00007)">
+      <path
+         style="fill:#ff00ff;fill-opacity:0.599388"
+         d="m 335,525 v -5 h 5 c 0,3 -2.01563,5 -5,5"
+         id="path10-6-6-6-2-6"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 339,520 c 0,2.5 -1.5,4 -4,4 v 1 c 3.01562,0 5,-2.00815 5,-5 h -0.9688"
+         id="path11-8-6-1-1-3-2-1"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="attention-left"
+       inkscape:label="#hover-left"
+       transform="translate(130.00007)">
+      <rect
+         style="fill:#ff00ff;fill-opacity:0.599388"
+         id="rect4-5-9-1-7"
+         width="5"
+         height="15"
+         x="315"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 315,505 h 1 v 15 h -1 z"
+         id="path12-9-0-4-6" />
+    </g>
+    <g
+       id="attention-bottom"
+       inkscape:label="#hover-bottom"
+       transform="translate(130.00007)">
+      <rect
+         style="fill:#ff00ff;fill-opacity:0.599388"
+         id="rect6-8-8-4-5"
+         width="15"
+         height="5"
+         x="320"
+         y="520" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 h 15 v 1 h -15"
+         id="path13-6-6-7-5" />
+    </g>
+    <rect
+       style="fill:#ff6600;fill-opacity:0.599388"
+       id="hover-center"
+       width="15"
+       height="15"
+       x="480.00009"
+       y="505"
+       inkscape:label="" />
+    <g
+       id="hover-right"
+       inkscape:label="#hover-right"
+       transform="translate(160.00009)">
+      <rect
+         style="fill:#ff6600;fill-opacity:0.599388"
+         id="rect3-7-3-0-5-9"
+         width="4.9999995"
+         height="15"
+         x="335"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 340,520 v -15 h -1 v 15 z"
+         id="path8-5-9-2-8-5" />
+    </g>
+    <g
+       id="hover-top"
+       inkscape:label="#hover-top"
+       transform="translate(154.99909)">
+      <rect
+         style="fill:#ff6600;fill-opacity:0.599388"
+         id="rect5-0-7-3-6-2"
+         width="15"
+         height="5.000001"
+         x="325.00101"
+         y="500" />
+      <path
+         style="fill:#000000;fill-opacity:0.98452"
+         d="m 340.001,500 h -15 v 1 h 15 v -1"
+         id="path9-7-9-2-7-8" />
+    </g>
+    <g
+       id="hover-topright"
+       inkscape:label="#hover-topright"
+       transform="translate(160.00009)">
+      <g
+         id="g14-1-2-4-2-3">
+        <path
+           style="fill:#ff6600;fill-opacity:0.599388"
+           d="m 340,505 h -5 v -5 c 3,0 5,2.01563 5,5"
+           id="path10-80-7-7-0-7-5"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g13-3-6-8-2-3">
+        <path
+           style="fill:#000000;fill-opacity:1"
+           d="m 335,501 c 2.5,0 4,1.5 4,4 h 1 c 0,-3.01562 -2.00815,-5 -5,-5 v 1"
+           id="path11-3-0-5-1-9"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+    </g>
+    <g
+       id="hover-topleft"
+       inkscape:label="#hover-topleft"
+       transform="translate(160.00009)">
+      <path
+         style="fill:#ff6600;fill-opacity:0.599388"
+         d="m 320,500 v 5 h -5 c 0,-3 2.01563,-5 5,-5"
+         id="path10-0-9-6-1-6"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 316,505 c 0,-2.5 1.5,-4 4,-4 v -1 c -3.01562,0 -5,2.00815 -5,5 h 0.9688"
+         id="path11-8-5-9-4-6-4"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="hover-bottomleft"
+       inkscape:label="#hover-bottomleft"
+       transform="translate(160.00009)">
+      <path
+         style="fill:#ff6600;fill-opacity:0.599388"
+         d="m 315,520 h 5 v 5 c -3,0 -5,-2.01563 -5,-5"
+         id="path10-8-0-9-4-8-8"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 c -2.5,0 -4,-1.5 -4,-4 h -1 c 0,3.01562 2.00815,5 5,5 v -0.9688"
+         id="path11-8-6-0-4-2-7-4"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="hover-bottomright"
+       inkscape:label="#hover-bottomright"
+       transform="translate(160.00009)">
+      <path
+         style="fill:#ff6600;fill-opacity:0.599388"
+         d="m 335,525 v -5 h 5 c 0,3 -2.01563,5 -5,5"
+         id="path10-6-6-6-2-6-7"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 339,520 c 0,2.5 -1.5,4 -4,4 v 1 c 3.01562,0 5,-2.00815 5,-5 h -0.9688"
+         id="path11-8-6-1-1-3-2-1-2"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="hover-left"
+       inkscape:label="#hover-left"
+       transform="translate(160.00009)">
+      <rect
+         style="fill:#ff6600;fill-opacity:0.599388"
+         id="rect4-5-9-1-7-3"
+         width="5"
+         height="15"
+         x="315"
+         y="505" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 315,505 h 1 v 15 h -1 z"
+         id="path12-9-0-4-6-4" />
+    </g>
+    <g
+       id="hover-bottom"
+       inkscape:label="#hover-bottom"
+       transform="translate(160.00009)">
+      <rect
+         style="fill:#ff6600;fill-opacity:0.599388"
+         id="rect6-8-8-4-5-8"
+         width="15"
+         height="5"
+         x="320"
+         y="520" />
+      <path
+         style="fill:#000000;fill-opacity:1"
+         d="m 320,524 h 15 v 1 h -15"
+         id="path13-6-6-7-5-3" />
+    </g>
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke-width:1.183"
+       id="hint-stretch-borders"
+       width="2"
+       height="2"
+       x="320"
+       y="500" />
+    <path
+       style="fill:#1a1a1a;stroke-width:1.21373"
+       d="m 385,540 2.50004,-5 2.49996,5 z"
+       id="group-expander-top" />
+    <path
+       style="fill:#1a1a1a;stroke-width:1.21373"
+       d="m 392.46404,540 2.50004,-5 2.49996,5 z"
+       id="group-expander-right" />
+    <path
+       style="fill:#1a1a1a;stroke-width:1.21373"
+       d="m 399.92808,540 2.50004,-5 2.49996,5 z"
+       id="group-expander-bottom" />
+    <path
+       style="fill:#1a1a1a;stroke-width:1.21373"
+       d="M 407.49996,540 410,535 l 2.49996,5 z"
+       id="group-expander-left" />
+  </g>
+</svg>
