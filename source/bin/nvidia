@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S nvidia-dkms nvidia-dkms-utils linux-headers qt6-wayland qt6ct libva
+sudo pacman -S --noconfirm nvidia-dkms nvidia-utils linux-headers qt6-wayland qt6ct libva
 #Additionally libva-nvidia-driver-git (AUR) to fix crashes in some Electron-based applications, such as Unity Hub.
 
 sudo sed -i '/^GRUB_CMDLINE_LINUX_DEFAULT=".*/ s/.$//' /etc/default/grub
