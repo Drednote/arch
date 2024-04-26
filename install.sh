@@ -25,12 +25,6 @@ if [[ $LANG == "Y" || $LANG == "y" ]]; then
     source source/bin/lang
 fi
 
-#### Dual boot ####
-read -p "$(echo -e ${WHITE}"Configure dualboot? (y,n) ${NC}")" DUAL
-if [[ $DUAL == "Y" || $DUAL == "y" ]]; then
-  source source/bin/dualboot
-fi
-
 read -p "$(echo -e ${WHITE}"Configure nvidia drivers? (y,n) ${NC}")" NVIDIA
 # see https://github.com/korvahannu/arch-nvidia-drivers-installation-guide?tab=readme-ov-file
 # https://wiki.hyprland.org/Nvidia/
@@ -43,6 +37,12 @@ source source/bin/install/yay
 read -p "$(echo -e ${WHITE}"Configure Plasma? (y,n) ${NC}")" PLASMA
 if [[ $PLASMA == "Y" || $PLASMA == "y" ]]; then
     source source/plasma
+fi
+
+#### Dual boot ####
+read -p "$(echo -e ${WHITE}"Configure dualboot? (y,n) ${NC}")" DUAL
+if [[ $DUAL == "Y" || $DUAL == "y" ]]; then
+  source source/bin/dualboot
 fi
 
 ### Script is done ###
